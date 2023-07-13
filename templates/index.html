@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Weather Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <style>
+        .tg  {border-collapse:collapse;border-spacing:0;}
+        .tg td{border-style:solid;border-width:10px;font-family:Arial, sans-serif;font-size:14px;
+            overflow:hidden;padding:10px 5px;word-break:normal;}
+        .tg th{border-style:solid;border-width:10px;font-family:Arial, sans-serif;font-size:14px;
+            font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+        .tg .tg-lboi{text-align:left;vertical-align:middle;}
+        .tg .tg-0pky{font-size: 25px; text-align:left;vertical-align:middle}
+        .tg .tg-bttn{font-size: 25px; horiz-align:center;vertical-align:middle}
+    </style>
+</head>
+<body>
+<div class="container text-center">
+    <h1 style="text-align: left;"><u>{{ city }}</u></h1>
+    <table class="tg">
+    <thead>
+        <tr>
+            <td class="tg-0pky">Timezone: {{ zone }}</td>
+            <td class="tg-lboi" rowspan="5">
+                <div style="overflow: hidden">
+                    <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1-VlXsvMWMr8EotfMcIwYKt-1SrI&ll={{ lat }}%2C{{ long }}&z=10" height="700" width="700" style="margin-top: -60px"></iframe>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td class="tg-0pky">Current Date: {{ date }}</td>
+        </tr>
+        <tr>
+            <td class="tg-0pky">Current Time: {{ time }}</td>
+        </tr>
+        <tr>
+            <td class="tg-0pky">Current Temp: {{ temp }} &#8451;</td>
+        </tr>
+        <tr>
+            <td class="tg-bttn" >
+                <div class="btn-group" role="group">
+                    <button type="button" class="btn btn-outline-primary" onclick="location.href='./discover'">Check other places</button>
+                    <button type="button" class="btn btn-danger" onclick="location.href='.'">Home</button>
+                </div>
+            </td>
+        </tr>
+    </thead>
+    </table>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+</body>
+</html>
