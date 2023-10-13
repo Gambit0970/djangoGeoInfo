@@ -1,5 +1,6 @@
 from django.db import models
 
+
 class Worldcities(models.Model):
     city = models.TextField(blank=True, null=True)
     city_ascii = models.TextField(blank=True, null=True)
